@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date</title>
+</head>
+<body>
+<output id="timer">00:00:00</output><br>
+<button type="button" id="start">Go!</button>
+<button type="button" id="stop">Stop</button>
+<button type="button" id="reset">Reset</button>
+<script src="./date.js"></script>
+</body>
+</html>
