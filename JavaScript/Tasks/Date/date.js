@@ -55,7 +55,7 @@
 //     let body = document.body;
 //     let div = document.createElement('div');
 //     body.appendChild(div);
-//     div.setAttribute("id", 'date');
+//     div.setAttribute("intervalReference", 'date');
 //
 //     let currentDate = new Date();
 //     let currentTime = currentDate.toLocaleDateString() + '  '
@@ -105,9 +105,9 @@
 
 // let inputNumber = () => {
 //     let i = 1;
-//     let id = setInterval(function () {
+//     let intervalReference = setInterval(function () {
 //         if (i === 10) {
-//             clearInterval(id);
+//             clearInterval(intervalReference);
 //         }
 //         console.log(i);
 //         i++;
@@ -131,72 +131,82 @@
 const INIT = 65 * 1000; // initial value - 65 seconds
 const T = 20;
 let time = INIT; // actual value of the timer
-let interval = T;
-let id;
+let countedMiliseconds = T;
+let intervalReference;
 let param;
 let timerState = false;
-
+let globalVar = 'test variable';
 // вызываем функцию reset() (которую вы должны написать)
 // в самом начале для установки исходного значения таймера
 
 let reset = () => {
-    setTimerValue(time);
+    setTimerValue(INIT);
+    time = INIT;
+    countedMiliseconds = T;
 };
 
 reset();
 
 //--------------------------------
-//     function StopId(timerId) {
-//         clearInterval(timerId);
-//         timerState = false;
-// }
+function StopId(timerId) {
+    clearInterval(timerId);
+    timerState = false;
+}
 
 //--------------------------------
 
-// function start() {
-//     timerState = true;
-//     function startTimer() {
-//         param = time - interval;
-//         setTimerValue(param);
-//         interval += 20;
-//     }
-//
-//     id = setInterval(function () {
-//         startTimer();
-//         if (param <= 0) {
-//             StopId(id);
-//             interval = T;
-//         }
-//     }, 20);
-// }
+function startTimer() {
+    if (timerState) {
+        return;
+    }
+    timerState = true;
+
+    intervalReference = setInterval(function () {
+
+        setNextTimerValue();
+        if (time - countedMiliseconds <= 0) {
+            StopId(intervalReference);
+            countedMiliseconds = T;
+        }
+    }, 20);
+
+    function setNextTimerValue() {
+        param = time - countedMiliseconds;
+        setTimerValue(param);
+        countedMiliseconds += 20;
+    }
+
+}
+
 //-----------------------------------------
-// function stopTimer() {
-//     StopId(id);
-//     interval = T;
-//     /* напишите код, который будет останавливать
-//      * таймер на текущем значении *//???????????????????????????
-// }
+function stopTimer() {
+    StopId(intervalReference);
+    // countedMiliseconds = T;
+    /* напишите код, который будет останавливать
+     * таймер на текущем значении */
+
+}
 
 //------------------------------------
-// function resetTimer() {
-//     if (timerState) {
-//         StopId(id);
-//         reset();
-//     } else {
-//         reset();
-//     }
+function resetTimer() {
+    if (timerState) {
+        StopId(intervalReference);
+        reset();
+    } else {
+        reset();
+    }
 
-//     /* напишите код, который будет останавливать таймер,
-//      * если он активен, и устанавливать его
-//      * в исходное значение INIT */
-// }
+    /* напишите код, который будет останавливать таймер,
+     * если он активен, и устанавливать его
+     * в исходное значение INIT */
+}
 
 //--------------------------------------------------
 var startBtn = document.getElementById("start");
 var stopBtn = document.getElementById("stop");
 var resetBtn = document.getElementById("reset");
 
-startBtn.onclick = start; //startTimer;
+startBtn.onclick = startTimer; //startTimer;
 stopBtn.onclick = stopTimer;
 resetBtn.onclick = resetTimer;
 
