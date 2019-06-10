@@ -1,0 +1,14 @@
+.gallery{
+    background-color: #eee;
+}
+
+.gallery_item > div {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .7);
+}
+.gallery_item p{
+    padding: 15px;
+}
+ .gallery_item{
+     margin-top: 30px;
+     margin-bottom: 30px;
+ }

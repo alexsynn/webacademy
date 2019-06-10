@@ -1,0 +1,11 @@
+@font-face {
+	font-family: Georgia;
+	font-weight: 400;
+	src: url("../fonts/Georgia.ttf");
+}
+
+@font-face {
+	font-family: GeorgiaBold;
+	font-weight: 600;
+	src: url("../fonts/georgia-bold.ttf");
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<form action="./form-handler.html" method="POST">
+
+    <fieldset>
+        <legend> User data</legend>
+        <div>
+            <label>
+                Name:
+                <input type="text" placeholder="Full name" name="name">
+                <!-- email | adress | date -->
+            </label>
+        </div>
+
+
+        <div>
+
+            <label>
+                Password:
+                <input type="password" name="password">
+            </label>
+        </div>
+
+        <div>
+
+            <label>
+                Age:
+                <input type="number" min="0" max="100" step="0.5" name="age">
+            </label>
+        </div>
+
+        <div>
+            Gender:
+            <label>Male <input type="radio" name="gender"></label>
+            <label>Femail <input type="radio" name="gender"></label>
+        </div>
+
+
+    </fieldset>
+
+    <div>
+        <label>
+            Confirm conditions:
+            <input type="checkbox" name="conditions">
+        </label>
+
+    </div>
+
+    <input type="button" value="do nothing">
+    <input type="submit" value="send form">
+    <input type="reset" value="reset form data">
+    <input type="file">
+</form>
+
+
+<br>
+<br>
+<form action="">
+
+    <textarea name="comment">lkgrejgelkngv.dfngelkrjg.ekfnble.frgjfsx</textarea>
+    <hr>
+    City
+    <select name="city">
+        <option value="K">Kyiv</option>
+        <option value="O">Odessa</option>
+        <option value="L">Lviv</option>
+    </select>
+
+    <hr>
+    <button type="button">
+        <i>do</i>
+        <b>nothing</b>
+    </button>
+
+    <hr>
+
+    <div>
+        <input id="field" type="text">
+    </div>
+    <div>
+
+        <label for="field"> Go to field</label>
+    </div>
+
+
+</form>
+<a href="#field"></a>
+
+
+</body>
+</html>

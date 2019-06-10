@@ -1,0 +1,102 @@
+.body {
+    background-color: rgb(84, 162, 47);
+}
+
+.main__menu {
+    background: linear-gradient(to top right, rgb(0, 101, 16), lightcyan);
+    box-sizing: border-box;
+    width: 600px;
+    position: relative;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.menu__items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-line-first, .menu-line-second {
+    background-color: rgb(0, 101, 16);
+    font-size: 64px;
+    color: #fff8be;
+    padding: 10% 15%;
+    margin: 5%;
+    opacity: 0.7;
+}
+
+.menu__items {
+    position: relative;
+}
+
+[id^="first"].menu-line-first:hover,
+[id^="second"].menu-line-second:hover {
+    color: #787878;
+    cursor: pointer;
+}
+
+[id="first-line-one"]::after {
+    content: '';
+    left: 20px;
+    right: 20px;
+    bottom: -2px;
+    background-color: white;
+    height: 2px;
+    position: absolute;
+    width: 41%;
+}
+
+[id="second-line-two"]::before {
+    content: '';
+    left: 55%;
+    right: 50%;
+    bottom: 100%;
+    background-color: white;
+    height: 2px;
+    position: absolute;
+    width: 41%;
+}
+
+.line1-vertical {
+    content: '';
+    right: 34%;
+    bottom: 75%;
+    background-color: white;
+    height: 2px;
+    position: absolute;
+    width: 32%;
+    transform: rotate(90deg);
+    box-sizing: border-box;
+}
+
+.line2-vertical {
+    content: '';
+    right: 34%;
+    bottom: 25%;
+    background-color: white;
+    height: 2px;
+    position: absolute;
+    width: 32%;
+    transform: rotate(90deg);
+    box-sizing: border-box;
+}
+
+.menu__items-center {
+    position: absolute;
+    top: 87%;
+    bottom: 45%;
+    left: 45%;
+    right: 50%;
+    z-index: 1;
+    font-size: 55px;
+    color: #787878;
+}
+
+.menu__items-center:hover {
+    color: white;
+    cursor: pointer;
+}
+

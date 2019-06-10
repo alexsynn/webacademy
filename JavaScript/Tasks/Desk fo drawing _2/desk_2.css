@@ -1,0 +1,22 @@
+body {
+    width: 1000px;
+    user-select: none;
+}
+
+div {
+    box-sizing: border-box;
+    float: left;
+    width: 10px;
+    height: 10px;
+    background: #eee;
+    border-right: 1px solid rgba(0, 0, 0, .2);
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+.fill {
+    background: #e33;
+}
+
+.notFill {
+    background: #eee;
+}

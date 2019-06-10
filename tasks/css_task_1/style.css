@@ -1,0 +1,89 @@
+.top_head {
+    content: "";
+    position: marker;
+    border: 4px solid coral;
+    width: 80%;
+    padding: 5px;
+    border-radius: 20px;
+    background: blueviolet;
+    color: wheat;
+    font-family: "Times New Roman", Tahoma, serif;
+    font-size: 50px;
+    font-style: oblique;
+    text-align: center;
+}
+
+span.for_header {
+    color: red;
+}
+
+span.for_header:hover {
+    color: yellow;
+}
+
+h1.top_head {
+    width: auto;
+}
+
+.for_image:hover {
+    border: 4px solid chartreuse;
+}
+
+.center {
+    display: block;
+    margin: 0 auto;
+}
+
+div > a > img[src="foto2.jpg"]:hover {
+    border: 4px solid orangered;
+}
+
+.for_blockquote {
+
+    content: "";
+    padding: 5px;
+    border-left: 3px solid navy;
+    width: 50%;
+
+}
+
+blockquote > i {
+    color: black;
+}
+
+.title {
+
+    block-size: max-content;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 30px;
+    border: 4px solid chartreuse;
+    padding: 5px;
+    /*width: auto;*/
+
+
+}
+
+ol.for_ol a  {
+color: red;
+}
+
+td[colspan="2"] {
+    background: gainsboro;
+}
+
+th[colspan="2"] {
+    background: gainsboro;
+}
+
+tbody th {
+    background: beige;
+}
+
+thead tr:last-child{
+    background: khaki;
+}
+
+ol.for_ol {
+    margin: auto;
+}

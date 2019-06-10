@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+.gallery {
+    display: flex;
+    width: 80%;
+    height: 300px;
+    margin: 0 auto;
+    background-color: #3fdc95;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+}
+
+.gallery img:not(:first-child) {
+    margin-left: -180px;
+}
+
+.gallery img {
+    width: 250px;
+    transform: perspective(1000px) rotateY(-290deg);
+    transition: margin-left 2s, margin-right 3s;
+}
+
+img:hover{
+    z-index: 999;
+    transform: none;
+}
+
+img.gallery-item-1:hover{
+    margin-right: 110px;
+}
+
+img.gallery-item-9:hover{
+    margin-left: -80px;
+}
+
+img.gallery-item-2:hover,
+img.gallery-item-3:hover,
+img.gallery-item-4:hover,
+img.gallery-item-5:hover,
+img.gallery-item-6:hover,
+img.gallery-item-7:hover,
+img.gallery-item-8:hover,
+img.gallery-item-9:hover{
+    margin-right: 110px;
+    margin-left: -80px;
+   }

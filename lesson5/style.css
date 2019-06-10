@@ -1,0 +1,29 @@
+.form {
+    width: 300px;
+ height: 250px;
+    background: beige;
+}
+
+.button {
+    display: flex;
+}
+
+.button__social {
+    flex: 1 1 50%;
+
+}
+
+.head {
+    text-align: center;
+    font-size: 24px;
+    font-family: Georgia Tahoma;
+    padding: 10px 0;
+}
+
+.input__title {
+padding-top: 10px;
+}
+
+.input__data {
+border-bottom-left-radius: 10px;
+}

@@ -1,0 +1,78 @@
+.main {
+    width: 250px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}
+
+.title {
+    font-size: 20px;
+    text-align: center;
+}
+
+label[for="fname"], label[for="lname"] {
+    font-size: 15px;
+}
+
+div > label {
+    font-size: 20px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: darkslategray;
+    color: white;
+    padding: 5px 20px;
+    margin-top: 15px;
+    margin-bottom: 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="text"] {
+   width: 100%;
+    border-radius: 5px;
+    border: unset;
+    outline:none;
+}
+
+.button {
+    display: flex;
+}
+
+.button__style {
+    flex: 1 1 15%;
+    width: 15px;
+    text-align: center;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 8px;
+}
+
+[name="fb"].button__style {
+    background: #4CAF50;
+}
+
+[name="g"].button__style {
+    background: lightgray;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a :visited {
+    text-decoration: none
+}
+
+label[for="lname"]{
+
+}
